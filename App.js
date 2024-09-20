@@ -12,7 +12,36 @@ const Tabs = createBottomTabNavigator();
 export default function App () {
   return (
     <NavigationContainer >
-      <Tabs.Navigator>
+      <Tabs.Navigator
+      screenOptions={{
+
+        headerStyle: {
+          backgroundColor: '#4530b2'
+        },
+    
+        headerTitleStyle: {
+          color: '#fff',
+          fontWeight: 'bold'
+        },
+    
+        headerTitleAlign: 'center',
+    
+
+        headerTitleAlign: 'center',
+        tabBarStyle: {
+          backgroundColor: "#eab990",
+        },
+        tabBarLabelStyle: {
+          fontSize: 18,
+          fontWeight: 'bold',
+        },
+        tabBarActiveBackgroundColor: "#e07d42",
+        tabBarInactiveTintColor: "#f00",
+        tabBarActiveTintColor: "#150b13",
+        tabBarLabelPosition: 'beside-icon',
+      }}
+      >
+
         <Tabs.Screen name="Início" component = { TelaInicial } options={{tabBarIcon: ({color}) => (<Entypo name="home" color={ color } size={24} />),}}/>
         <Tabs.Screen name="Sobre" component = { TelaSobre }  options={{
             tabBarIcon: ({ color }) => (
